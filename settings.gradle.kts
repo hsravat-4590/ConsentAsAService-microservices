@@ -1,9 +1,13 @@
 rootProject.name = "ConsentAsAService"
-include("SAP-DA-Lib")
-include("SAP-DA-Lib:Base")
-findProject(":SAP-DA-Lib:Base")?.name = "SAP-DA-Lib-Base"
-include("SAP-DA-Lib:MySQL")
-findProject(":SAP-DA-Lib:MySQL")?.name = "SAP-DA-Lib-MySQL"
+include("Libraries")
+include("Common")
+include(":Libraries:DA-Lib")
+include(":Libraries:DA-Lib:Base")
+findProject(":Libraries:DA-Lib:Base")?.name = "DA-Lib-Base"
+include(":Libraries:DA-Lib:MySQL")
+findProject(":Libraries:DA-Lib:MySQL")?.name = "DA-Lib-MySQL"
+include(":Libraries:DA-Lib:DA-Lib-API")
+findProject(":Libraries:DA-Lib:DA-Lib-API")?.name = "DA-Lib-API"
 
 pluginManagement {
     plugins {
@@ -13,7 +17,3 @@ pluginManagement {
         kotlin("plugin.spring") version "1.6.21"
     }
 }
-
-include("Common")
-include("SAP-DA-Lib:SAP-DA-Lib-API")
-findProject(":SAP-DA-Lib:SAP-DA-Lib-API")?.name = "SAP-DA-Lib-API"
