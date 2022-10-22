@@ -1,13 +1,4 @@
 rootProject.name = "ConsentAsAService"
-include("Libraries")
-include("Common")
-include(":Libraries:DA-Lib")
-include(":Libraries:DA-Lib:Base")
-findProject(":Libraries:DA-Lib:Base")?.name = "DA-Lib-Base"
-include(":Libraries:DA-Lib:MySQL")
-findProject(":Libraries:DA-Lib:MySQL")?.name = "DA-Lib-MySQL"
-include(":Libraries:DA-Lib:DA-Lib-API")
-findProject(":Libraries:DA-Lib:DA-Lib-API")?.name = "DA-Lib-API"
 
 pluginManagement {
     plugins {
@@ -17,3 +8,15 @@ pluginManagement {
         kotlin("plugin.spring") version "1.6.21"
     }
 }
+
+include("Libraries")
+include("Common")
+include("Services")
+include("Applications")
+include(":Libraries:DA-Lib:Base")
+project(":Libraries:DA-Lib:Base").name = "DA-Lib-Base"
+include(":Libraries:DA-Lib:MySQL")
+project(":Libraries:DA-Lib:MySQL").name = "DA-Lib-MySQL"
+include(":Libraries:DA-Lib:API")
+project(":Libraries:DA-Lib:API").name = "DA-Lib-API"
+
