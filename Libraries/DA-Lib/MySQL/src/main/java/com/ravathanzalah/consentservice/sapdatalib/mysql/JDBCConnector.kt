@@ -5,7 +5,9 @@ import com.ravathanzalah.consentservice.sapdatalib.JDBCConnector
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Component
 
+@Component
 class MySQLJDBCConnector(@Autowired private val mySQLConfig: MySQLConfig): JDBCConnector() {
 
     companion object {
