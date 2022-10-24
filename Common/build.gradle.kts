@@ -11,8 +11,7 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    api(project(":Libraries:DA-Lib:DA-Lib-Base"))
-    api(project(":Libraries:DA-Lib:DA-Lib-MySQL"))
+    api(project(":Libraries:DA-Lib"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
 }
