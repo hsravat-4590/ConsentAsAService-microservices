@@ -24,6 +24,7 @@ gradleEnterprise {
     }
 }
 
+
 include("Libraries")
 include("Common")
 include("Services")
@@ -41,3 +42,5 @@ include("Services:SAP-TransactionService:API")
 findProject(":Services:SAP-TransactionService:API")?.name = "SAP-TransactionService-API"
 include("Services:SAP-TransactionService:IMPL")
 findProject(":Services:SAP-TransactionService:IMPL")?.name = "SAP-TransactionService-IMPL"
+include("Services:SAP-TransactionService:WAR")
+findProject(":Services:SAP-TransactionService:WAR")?.name = "SAP-TransactionService-WAR"
