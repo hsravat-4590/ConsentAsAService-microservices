@@ -1,0 +1,8 @@
+hikari:
+  enabled: true
+  maximumPoolSize: 10
+databaseConnection:
+  jdbcUrl: "jdbc:mysql://aws-eu-west-2.connect.psdb.cloud:3306?sslMode=VERIFY_IDENTITY"
+  driverClassName: "com.mysql.cj.jdbc.Driver"
+  username: "l6m08wejw16fexepfm83"
+  password: "pscale_pw_DTKuLh226ZbHeYXq3pyt1KB5x9qYKaLvHgaJbqTHlYo"
