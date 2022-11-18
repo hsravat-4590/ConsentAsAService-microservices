@@ -12,7 +12,7 @@ val exposedVersion: String by project
 
 
 dependencies {
-    implementation(project(":Libraries:DA-Lib:DA-Lib-Base"))
+    api(project(":Libraries:DA-Lib:DA-Lib-Base"))
     implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
     implementation("mysql:mysql-connector-java:8.0.30")
