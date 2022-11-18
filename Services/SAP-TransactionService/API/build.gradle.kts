@@ -1,6 +1,7 @@
 plugins {
     java
-    id("io.spring.dependency-management") apply true
+    id("io.spring.dependency-management")
+    id("org.springframework.boot")
     kotlin("jvm")
     kotlin("plugin.spring")
     id("io.freefair.lombok") apply true
@@ -12,9 +13,13 @@ configurations {
     }
 }
 
+tasks.bootJar {
+    enabled = false
+}
+
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web:2.7.5")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.4")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.0")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")

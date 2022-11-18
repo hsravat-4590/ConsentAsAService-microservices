@@ -2,10 +2,10 @@ group = "com.ravathanzalah.consentservice"
 version = "1.0.0"
 
 plugins {
-    war
     id("java")
     id("kotlin") apply true
 }
+
 subprojects {
     group = "com.ravathanzalah.consentservice.saptransactionservice"
     version = this.version
@@ -13,9 +13,4 @@ subprojects {
 
 dependencies {
     api(project(":Services:SAP-TransactionService:SAP-TransactionService-API"))
-    implementation(project(":Services:SAP-TransactionService:SAP-TransactionService-IMPL"))
-    implementation("org.springframework.boot:spring-boot-starter-web:2.7.5")
-    implementation("org.springframework.boot:spring-boot-starter-actuator:2.7.5")
-
-    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat:2.7.5")
 }
