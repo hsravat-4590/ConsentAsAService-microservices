@@ -7,8 +7,12 @@ import org.jetbrains.exposed.sql.Database
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 
-@Component
-class MySQLDatabaseConnector: JDBCConnector() {
+class MySQLJDBCConnectorImpl: JDBCConnector() {
+
+    companion object {
+        const val DEFAULT_DRIVER = "com.mysql.cj.jdbc.Driver"
+    }
+
 
     @Value("\${hikari.enabled}")
     private val hikariEnabled: Boolean = false
@@ -20,7 +24,7 @@ class MySQLDatabaseConnector: JDBCConnector() {
     private val jdbcUrl: String = "jdbc:mysql//localhost:3306"
 
     @Value("\${databaseConnection.driverClassName")
-    private val driverClassName: String = "com.mysql.cj.jdbc.Driver"
+    private val driverClassName: String = DEFAULT_DRIVER
 
     @Value("\${databaseConnection.username")
     private val username: String = "user"
