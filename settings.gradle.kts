@@ -1,15 +1,5 @@
 rootProject.name = "ConsentAsAService"
 
-pluginManagement {
-    plugins {
-        id("org.jetbrains.kotlin.jvm") version "1.7.20"
-        id("org.springframework.boot") version "2.7.5"
-        id("io.spring.dependency-management") version "1.1.0"
-        id("io.freefair.lombok") version "6.5.1"
-        kotlin("plugin.spring") version "1.6.21"
-    }
-}
-
 plugins {
     id("com.gradle.enterprise") version("3.9")
 }
@@ -42,5 +32,5 @@ include("Services:SAP-TransactionService:API")
 findProject(":Services:SAP-TransactionService:API")?.name = "SAP-TransactionService-API"
 include("Services:SAP-TransactionService:IMPL")
 findProject(":Services:SAP-TransactionService:IMPL")?.name = "SAP-TransactionService-IMPL"
-include("Services:SAP-TransactionService:WAR")
-findProject(":Services:SAP-TransactionService:WAR")?.name = "SAP-TransactionService-WAR"
+include("Services:SAP-DiscoveryService")
+findProject(":Services:SAP-DiscoveryService")?.name = "SAP-DiscoveryService"

@@ -11,6 +11,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin.
     kotlin("jvm") apply true
+    id("org.springframework.boot") version "2.7.5" apply false
+    id("io.spring.dependency-management") version "1.1.0" apply true
+    id("io.freefair.lombok") version "6.5.1" apply false
+    kotlin("plugin.spring") version "1.6.21" apply false
 }
 
 repositories {
