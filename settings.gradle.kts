@@ -36,5 +36,5 @@ include("Services:SAP-DiscoveryService")
 findProject(":Services:SAP-DiscoveryService")?.name = "SAP-DiscoveryService"
 include("Libraries:DA-Lib:DA-Connectors-Config")
 findProject(":Libraries:DA-Lib:DA-Connectors-Config")?.name = "DA-Connectors-Config"
-include("Libraries:DA-Lib:DA-My-SQL-Adapter")
-findProject(":Libraries:DA-Lib:DA-My-SQL-Adapter")?.name = "DA-My-SQL-Adapter"
+include("Libraries:DA-Lib:DA-MySQL-Adapter")
+findProject(":Libraries:DA-Lib:DA-MySQL-Adapter")?.name = "DA-MySQL-Adapter"
