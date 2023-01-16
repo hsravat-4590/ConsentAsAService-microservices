@@ -34,3 +34,7 @@ include("Services:SAP-TransactionService:IMPL")
 findProject(":Services:SAP-TransactionService:IMPL")?.name = "SAP-TransactionService-IMPL"
 include("Services:SAP-DiscoveryService")
 findProject(":Services:SAP-DiscoveryService")?.name = "SAP-DiscoveryService"
+include("Libraries:DA-Lib:DA-Connectors-Config")
+findProject(":Libraries:DA-Lib:DA-Connectors-Config")?.name = "DA-Connectors-Config"
+include("Libraries:DA-Lib:DA-My-SQL-Adapter")
+findProject(":Libraries:DA-Lib:DA-My-SQL-Adapter")?.name = "DA-My-SQL-Adapter"
