@@ -11,18 +11,13 @@ repositories {
     mavenCentral()
 }
 
-val exposedVersion: String by project
 val xerialSQLiteVersion: String by project
 
 
 dependencies {
-    implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-dao:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
-    implementation("org.jetbrains.exposed:exposed-java-time:$exposedVersion")
+    api(project(":Libraries:DA-Lib:DA-Connectors-Config")) // API to allow implementors to access exposed DSL
+    implementation(project(":Libraries:DA-Lib:DA-MySQL-Adapter"))
     implementation("org.xerial:sqlite-jdbc:$xerialSQLiteVersion")
-    api("org.apache.tomcat:tomcat-jdbc:10.1.1")
-
 
     // Test Dependencies
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
