@@ -1,6 +1,9 @@
 plugins {
     id("java")
+    id("io.spring.dependency-management")
+    id("org.springframework.boot")
     kotlin("jvm")
+    kotlin("plugin.spring")
 }
 
 configurations {
@@ -12,6 +15,10 @@ configurations {
 
 repositories {
     mavenCentral()
+}
+
+tasks.bootJar {
+    enabled = false
 }
 
 dependencies {
