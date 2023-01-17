@@ -6,7 +6,3 @@ plugins {
     id("java")
     kotlin("jvm") apply true
 }
-
-dependencies {
-    api(project(":Libraries:DA-Lib:DA-Lib-API"))
-}

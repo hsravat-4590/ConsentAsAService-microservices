@@ -16,8 +16,12 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
-extra["springCloudVersion"] = "2021.0.5"
-extra["springBootVersion"] = "2.7.5"
+val springCloudVersion: String by project
+val springBootVersion: String by project
+
+extra["springCloudVersion"] = springCloudVersion
+extra["springBootVersion"] = springBootVersion
+
 dependencyManagement {
     imports {
         mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")

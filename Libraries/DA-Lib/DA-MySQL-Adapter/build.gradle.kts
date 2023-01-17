@@ -11,12 +11,17 @@ repositories {
     mavenCentral()
 }
 
+val mySQLConnectorVersion: String by project
+val hikariCPVersion: String by project
+val junitJupiterVersion: String by project
+
+
 dependencies {
     implementation(project(":Libraries:DA-Lib:DA-Connectors-Config"))
-    implementation("mysql:mysql-connector-java:8.0.30")
-    implementation("com.zaxxer:HikariCP:5.0.1")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+    implementation("mysql:mysql-connector-java:$mySQLConnectorVersion")
+    implementation("com.zaxxer:HikariCP:$hikariCPVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
 
 tasks.getByName<Test>("test") {
