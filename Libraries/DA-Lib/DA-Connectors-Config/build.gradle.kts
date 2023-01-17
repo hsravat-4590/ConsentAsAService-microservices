@@ -11,15 +11,18 @@ repositories {
 }
 
 val exposedVersion: String by project
+val tomcatJDBCVersion: String by project 
+val junitJupiterVersion: String by project 
+
 
 dependencies {
     api("org.jetbrains.exposed:exposed-core:$exposedVersion")
     api("org.jetbrains.exposed:exposed-dao:$exposedVersion")
     api("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
     api("org.jetbrains.exposed:exposed-java-time:$exposedVersion")
-    api("org.apache.tomcat:tomcat-jdbc:10.1.4")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+    api("org.apache.tomcat:tomcat-jdbc:$tomcatJDBCVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
 
 tasks.getByName<Test>("test") {

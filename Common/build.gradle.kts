@@ -10,10 +10,12 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
 }
+val junitJupiterVersion: String by project
+
 dependencies {
     api(project(":Libraries:DA-Lib"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
 
 tasks.getByName<Test>("test") {

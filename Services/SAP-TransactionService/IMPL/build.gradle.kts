@@ -22,21 +22,25 @@ tasks.bootJar {
     enabled = true
 }
 
+val junitJupiterVersion: String by project
+val fasterXmlJacksonModuleKt: String by project
+val springCloudVersion: String by project
+
 dependencies {
     implementation(project(":Services:SAP-TransactionService:SAP-TransactionService-DA"))
     implementation(project(":Services:SAP-TransactionService:SAP-TransactionService-API"))
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.4")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$fasterXmlJacksonModuleKt")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
 
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
 
-extra["springCloudVersion"] = "2021.0.5"
+extra["springCloudVersion"] = springCloudVersion
 
 dependencyManagement {
     imports {
