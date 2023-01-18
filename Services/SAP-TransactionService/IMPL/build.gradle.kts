@@ -27,8 +27,8 @@ val fasterXmlJacksonModuleKt: String by project
 val springCloudVersion: String by project
 
 dependencies {
-    implementation(project(":Services:SAP-TransactionService:SAP-TransactionService-DA"))
     implementation(project(":Services:SAP-TransactionService:SAP-TransactionService-API"))
+    implementation(project(":Libraries:DA-Lib:DA-Lib-Base"))
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$fasterXmlJacksonModuleKt")

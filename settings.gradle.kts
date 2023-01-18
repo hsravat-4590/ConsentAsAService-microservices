@@ -22,8 +22,6 @@ include("Applications")
 include(":Libraries:DA-Lib:Base")
 project(":Libraries:DA-Lib:Base").name = "DA-Lib-Base"
 include("Services:SAP-TransactionService")
-include("Services:SAP-TransactionService:DA")
-findProject(":Services:SAP-TransactionService:DA")?.name = "SAP-TransactionService-DA"
 include("Services:SAP-TransactionService:API")
 findProject(":Services:SAP-TransactionService:API")?.name = "SAP-TransactionService-API"
 include("Services:SAP-TransactionService:IMPL")
