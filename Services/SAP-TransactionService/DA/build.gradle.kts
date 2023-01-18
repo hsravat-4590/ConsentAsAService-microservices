@@ -24,6 +24,7 @@ tasks.bootJar {
 val junitJupiterVersion: String by project
 
 dependencies {
+    implementation(project(":Libraries:DA-Lib:DA-Lib-Base"))
     implementation("org.springframework.boot:spring-boot-starter")
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
