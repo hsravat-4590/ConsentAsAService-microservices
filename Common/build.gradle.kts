@@ -13,7 +13,6 @@ repositories {
 val junitJupiterVersion: String by project
 
 dependencies {
-    api(project(":Libraries:DA-Lib"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
